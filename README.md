@@ -33,3 +33,6 @@ Check if the config is correct with ```nginx -t``` and start and enable nginx ``
 
 ### Step 8 
 Profit ;)
+
+### Note:
+To make sure your tunnel is working you can check with ```ps aux | grep sleep``` and ```ps aux | grep ssh```
