@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -e
+# Establishing tunnel for accessing through the remote end's port 9191 to the client's port 22 and 
+# accept connection from any address using port 25000 as the monitoring port.
+# Delayed to make sure it actually starts after everything else is started. Systemd can do some... magic
+sleep 60 && autossh -M 25000 -N user@1.2.3.4 -R 0.0.0.0:9191:localhost:22 &
+
+
